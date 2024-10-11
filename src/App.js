@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import "bootstrap/dist/css/bootstrap.css";
+import Header from './components/Header';
+import BlogApp from './components/BlogApp';
+import "./styles/general.css"
+import Sidebar from './components/Sidebar';
 
 function App() {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const storedUser = JSON.parse(localStorage.getItem('user'));
+    const token = localStorage.getItem('token');
+    
+    if (storedUser && token) {
+      setUser(storedUser); // Set user state if token and user exist
+    }
+  }, []);
+
+  const handleLogout = () => {
+    // Remove token from localStorage
+    localStorage.removeItem('token');
+    // localStorage.removeItem('user');
+    setUser(null); // Update user state to null
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Header user={user} setUser={setUser} handleLogout={handleLogout}/>
+      <Sidebar handleLogout={handleLogout} />
+      <BlogApp/>
+      <Routes>
+      </Routes>
+    </Router>
   );
 }
 

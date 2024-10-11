@@ -1,0 +1,147 @@
+.header-navbar {
+    /* position: relative; */
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+  }
+
+.header-navbar .search-input{
+    flex: 1;
+    max-width: 500px; /* Maximum width on larger screens */
+    min-width: 200px;
+}
+
+.register-login-buttons{
+    background-color: #6C5DD3;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    border: none;
+}
+
+.register-login-buttons:hover,
+  .register-login-buttons:focus{
+    background-color: #6C5DD3 !important;
+    color: white !important;
+    border-radius: 8px !important;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.2) !important;
+    border: none !important; 
+  }
+
+  .register-login-buttons:active{
+    background-color: white !important;
+    color: #6C5DD3 !important;
+    border: none !important; 
+  }
+
+/* Remove hover effect on dropdown items */
+/* .dropdowns .dropdown-items:hover,
+.dropdowns .dropdown-items:focus,
+.dropdowns .dropdown-items:active,
+.dropdowns .dropdown-items:checked,
+.dropdowns .dropdown-items::selection{
+  background-color: transparent !important; 
+  color: inherit !important; 
+} */
+
+/* Remove active state on dropdown items */
+.dropdown-menu .dropdown-item.active {
+  background-color: transparent !important; /* Remove background color on active state */
+  color: inherit !important; /* Maintain original text color on active state */
+}
+
+.header-navbar .arrow-right{
+  display: none !important;
+}
+
+  
+  /* Tablet View */
+  @media (max-width: 1024px) {
+    .header-navbar .navbar-brand img {
+      height: 40px; /* Smaller logo or icon version */
+    }
+
+    .header-navbar .logo-text{
+        display: none !important;
+    }
+
+    .header-navbar .arrow-right{
+      display: none !important;
+    }
+  
+    /* Replace search bar with search icon */
+    .header-navbar .search-input {
+      display: none; /* Hide search bar */
+    }
+    
+    .header-navbar .search-icon {
+      display: inline-block; /* Show search icon */
+      cursor: pointer; /* Add cursor pointer */
+      background-color: transparent; /* Ensure background is transparent */
+      border: none; /* Remove border */
+    }
+
+    .header-navbar .dropdowns{
+        margin-right: 30px !important;
+    }
+
+    .header-navbar .search-profile-wrapper{
+        margin-left: auto !important;
+    }
+  
+    /* Hide name and profession for tablet view */
+    /* .header-navbar .profile-details {
+      display: block;  Keep it visible for tablet 
+    } */
+  }
+  
+  /* Mobile View */
+  @media (max-width: 715px) {
+    .header-navbar .navbar-brand img {
+      height: 35px; /* Ensure logo is small enough */
+    }
+  
+    /* Search icon layout */
+     .header-navbar .search-icon {
+      /* display: block;  */
+      margin-left: auto !important; /* Align to the right */
+    }
+  
+    /* Adjust dropdowns to appear below them */
+    .header-navbar .dropdowns {
+      background-color: white;
+      flex-direction: row;
+      justify-content: space-evenly !important;
+      position: absolute; /* Position below the profile section */
+      top: 60px; /* Adjust based on your layout */
+      left: 0px;
+      z-index: 10; /* Ensure dropdown appears on top */
+      width: 100%;
+      margin-left: 0px !important;
+    }
+
+    .header-navbar .logo{
+      margin-left: 150px;
+    }
+
+    .header-navbar .logo-text{
+      display: inline !important;
+    }
+    .header-navbar .arrow-right{
+      display: inline !important;
+    }
+  
+    /* Hide profile details for mobile */
+    .header-navbar .profile-details {
+      display: none; /* Hide name and profession */
+    }
+  
+    /* Adjust profile picture alignment */
+    .header-navbar .profile-container {
+      justify-content: flex-end; /* Align to right */
+    }
+  }
+  

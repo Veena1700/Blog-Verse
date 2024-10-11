@@ -1,0 +1,171 @@
+/* BlogApp.css */
+.blog-app {
+    margin-top: 110px; /* Adjust based on your header height */
+    margin-left: 240px;
+    margin-right: 40px;
+  }
+
+  .title-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .buttons-container{
+    display: flex;
+  }
+
+  .buttons-container button{
+    flex: 0;             
+    margin-left: 10px;    
+    padding: 10px 20px;   
+    white-space: nowrap;
+  }
+
+  .add-new-button{
+    background-color: white;
+    color: #6C5DD3;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    margin-right: 2%;
+  }
+
+  .add-new-button:hover,
+  .add-new-button:focus{
+    background-color: white !important;
+    color: #6C5DD3 !important;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+  }
+
+  .add-new-button:active{
+    background-color: #6C5DD3 !important;
+    color: white !important;
+  }
+
+  .preview-button{
+    background-color: #6C5DD3;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+  }
+
+  .modal-button{
+    background-color: #6C5DD3;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+  }
+
+  .modal-button:hover,
+  .modal-button:focus{
+    background-color: #6C5DD3 !important;
+    color: white !important;
+    border-radius: 8px !important;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.2) !important;
+  }
+
+  .modal-button:active{
+    background-color: white !important;
+    color: #6C5DD3 !important;
+  }
+
+  .each-card{
+    height: 365px;
+    border: none;
+  }
+
+  .card-image{
+    height: 122px;
+    margin: auto;
+    object-fit: contain;
+    /* width: auto !important; */
+  }
+
+  .image-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    position: relative;
+  }
+  
+  .button-container {
+    position: absolute;
+    bottom: 10px;
+    left: 5px;
+    display: flex;
+    justify-content: space-evenly; /* Ensures buttons are spaced properly */
+    align-items: center;
+  }
+
+  .btn-sm{
+    margin-right: 4px;
+  }
+  
+  .card-text {
+    max-height: 4.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+
+  @media (max-width: 992px){
+    .blog-app{
+        margin-left: 100px;
+    }
+  }
+  
+
+  
+
+  @media (max-width: 765px){
+    .blog-app{
+        margin-left: 100px;
+    }
+    .each-card{
+        height: 365px;
+    }
+  }
+
+  
+
+  @media (max-width: 576px){
+    .blog-app{
+      margin-left: 0px !important;
+    }
+    .title-wrapper{
+        margin-left: 24px !important;
+    }
+    .each-card{
+        height: 260px;
+        padding: 0px 6px !important;
+    }
+    .card-image{
+        height: 69px;
+    }
+
+    .card-title{
+        font-size: 13px;
+    }
+
+    .card-text {
+        font-size: 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .add-new-button{
+        margin-left: 23%;
+      }
+    
+      .buttons-container button{
+        padding: 5px 10px;
+        font-size: 14px;
+      }
+  }
+
