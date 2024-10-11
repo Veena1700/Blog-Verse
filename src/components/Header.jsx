@@ -49,11 +49,6 @@ const Header = ({user, setUser, handleLogout}) => {
           <Dropdown.Toggle variant="light" id="dropdown-basic" className="dropdown-items text-dark">
             Afterglow
           </Dropdown.Toggle>
-          {/* <Dropdown.Menu>
-            <Dropdown.Item href="#/action-1">Option 1</Dropdown.Item>
-            <Dropdown.Item href="#/action-2">Option 2</Dropdown.Item>
-            <Dropdown.Item href="#/action-3">Option 3</Dropdown.Item>
-          </Dropdown.Menu> */}
         </Dropdown>
 
         <div className="d-flex align-items-center ms-4">
@@ -62,11 +57,6 @@ const Header = ({user, setUser, handleLogout}) => {
             <Dropdown.Toggle variant="light" id="dropdown-basic" className="dropdown-items text-muted ">
               Default
             </Dropdown.Toggle>
-            {/* <Dropdown.Menu>
-              <Dropdown.Item href="#/action-1">Scenario 1</Dropdown.Item>
-              <Dropdown.Item href="#/action-2">Scenario 2</Dropdown.Item>
-              <Dropdown.Item href="#/action-3">Scenario 3</Dropdown.Item>
-            </Dropdown.Menu> */}
           </Dropdown>
         </div>
       </Nav>
@@ -88,24 +78,6 @@ const Header = ({user, setUser, handleLogout}) => {
           </InputGroup>
         </div>
 
-        {/* User Profile */}
-        {/* <div className="d-flex align-items-center">
-          <Image
-            src="./assets/profile-picture.png" // Path to profile image
-            roundedCircle
-            height="40"
-            width="40"
-            className="me-2"
-          /> 
-          <div className="profile-details">
-            {isLogin ? 
-            <h6 className="mb-0">Robert Fox</h6> :
-            <Button variant="primary" onClick={() => setShowModal(true)}>
-              Login
-            </Button>
-          }
-          </div>
-        </div> */}
         <div className="d-flex align-items-center">
         {user ? ( // Show username if logged in
               <>

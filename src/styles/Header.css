@@ -123,9 +123,18 @@
       margin-left: 0px !important;
     }
 
-    .header-navbar .logo{
-      margin-left: 150px;
+    .header-navbar .search-profile-wrapper{
+      margin-left: 0 !important;
+  }
+
+    .header-navbar{
+      display: flex;
+      justify-content: space-between !important;
     }
+
+    /* .header-navbar .logo{
+      /* margin-left: 60%; 
+    } */
 
     .header-navbar .logo-text{
       display: inline !important;
